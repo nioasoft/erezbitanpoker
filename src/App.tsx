@@ -30,9 +30,9 @@ const Navbar = () => (
         <a href="#edge" className="hover:text-emerald-400 transition-colors">היתרון</a>
         <a href="#contact" className="hover:text-emerald-400 transition-colors">צור קשר</a>
       </div>
-      <button className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-emerald-900/20">
+      <a href="#contact" className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-emerald-900/20">
         תיאום פגישה
-      </button>
+      </a>
     </div>
   </nav>
 );
@@ -66,12 +66,12 @@ const Hero = () => (
           מגשר על הפער בין אינטואיציה לוודאות מתמטית.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 transition-all flex items-center justify-center gap-2">
+          <a href="#consulting" className="bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 transition-all flex items-center justify-center gap-2">
             גלה את שירותי הייעוץ <ChevronLeft size={20} />
-          </button>
-          <button className="border border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+          </a>
+          <a href="#about" className="border border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all text-center">
             הסיפור של האגדה
-          </button>
+          </a>
         </div>
       </motion.div>
     </div>
@@ -265,7 +265,7 @@ const Footer = () => (
             </a>
           </div>
         </div>
-        <form className="space-y-6 text-right">
+        <form className="space-y-6 text-right" onSubmit={(e) => { e.preventDefault(); alert('הפנייה נשלחה בהצלחה!'); }}>
           <div className="grid grid-cols-2 gap-6">
             <input type="text" placeholder="שם" className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:border-emerald-500 outline-none transition-all text-right" />
             <input type="email" placeholder="אימייל" className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:border-emerald-500 outline-none transition-all text-right" />
